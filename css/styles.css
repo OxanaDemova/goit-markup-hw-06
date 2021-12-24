@@ -117,7 +117,6 @@ img {
 
   min-width: 200px;
   padding: 10px 32px;
-  border: 1px solid #000000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -147,6 +146,8 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* Header section */
@@ -528,7 +529,7 @@ img {
 .foter-social {
   margin-left: 70px;
 }
-.footer-welcome-title {
+.footer-title {
   margin-bottom: 20px;
 
   line-height: 1.2;
@@ -570,6 +571,51 @@ img {
   margin-left: 10px;
 }
 
+.foter-subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+.subscribe-email {
+  width: 358px;
+  height: 50px;
+
+  padding: 15px 16px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+}
+
+.subscribe-email::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 28px 10px 29px;
+  margin-left: 12px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  font-weight: 700;
+  color: var(--main-color);
+  background-color: #2196f3;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
+  fill: var(--main-color);
+}
 /* Portfolio elements */
 
 /* Work samples section */
@@ -696,8 +742,10 @@ img {
   left: 50%;
   top: 50%;
 
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
+
+  padding: 40px;
 
   background-color: var(--main-color);
   border-radius: 4px;
@@ -722,4 +770,144 @@ img {
 .close-btn:hover,
 .close-btn :focus {
   fill: var(--accent-color);
+}
+
+.request-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--title-text-color);
+}
+.request-form {
+}
+
+.request-form-field {
+  position: relative;
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.request-input {
+  padding: 12px 12px 12px 42px;
+}
+
+.request-input,
+.request-comment {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  transition: border var(--animation-time) var(--main-timing-function);
+}
+
+.request-comment {
+  height: 120px;
+  padding: 16px 12px;
+  resize: none;
+  margin-top: 28px;
+}
+
+.request-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea-label {
+  display: block;
+  color: #757575;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  transform: translate(0px, 10px);
+}
+.request-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  display: block;
+
+  transition: fill var(--animation-time) var(--main-timing-function);
+}
+
+.comment-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.request-input:focus,
+.request-comment:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.request-input:focus + .request-form-icon {
+  fill: var(--accent-color);
+}
+.policy-box {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.policy-link {
+  color: rgba(33, 150, 243, 1);
+}
+
+.policy-box::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 9px;
+}
+
+.policy-checkbox:checked + .policy-box::before {
+  background-color: #2196f3;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.policy-checkbox:focus + .policy-box::before {
+  border-color: #2196f3;
+  outline: 2px solid #2196f3;
+}
+
+.btn-request {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.9;
+  background-color: #2196f3;
+
+  min-width: 200px;
+  padding: 10px 55px 10px 56px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: box-shadow var(--animation-time) var(--main-timing-function),
+    background-color var(--animation-time) var(--main-timing-function);
+}
+
+.btn-request:hover,
+.btn-request:focus {
+  background-color: #188ce8;
 }
